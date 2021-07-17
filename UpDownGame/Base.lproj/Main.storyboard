@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
@@ -92,6 +91,7 @@
                                 </state>
                                 <connections>
                                     <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKu-gi-aC5"/>
+                                    <segue destination="7yk-3z-6pz" kind="presentation" modalTransitionStyle="crossDissolve" id="Uj7-fT-I1k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Random number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjO-46-Vpe">
@@ -130,20 +130,97 @@
                         <outlet property="maximumValueLable" destination="onA-3v-Owo" id="rq2-v5-3vu"/>
                         <outlet property="minimumValueLable" destination="ucM-n8-Ru8" id="iwl-Er-wYx"/>
                         <outlet property="slider" destination="IMV-Yo-hjI" id="tB3-mr-W1T"/>
-                        <outlet property="sliederValueLable" destination="CWi-bu-XoG" id="dqA-94-jGX"/>
+                        <outlet property="sliderValueLable" destination="CWi-bu-XoG" id="JY5-vF-pI2"/>
                         <outlet property="tryCountLable" destination="ebd-9J-LIV" id="HZw-WE-bYr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19.419642857142858" y="73.913043478260875"/>
+        </scene>
+        <!--Credit View Controller-->
+        <scene sceneID="yOR-Ib-YEE">
+            <objects>
+                <viewController id="7yk-3z-6pz" userLabel="Credit View Controller" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OP6-vV-Vrn">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="FZ0-yJ-4rl">
+                                <rect key="frame" x="60" y="126.5" width="167" height="160.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPy-K4-MSX">
+                                <rect key="frame" x="60" y="20" width="56" height="56.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.seal" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="7yk-3z-6pz" eventType="touchUpInside" id="6Tq-E9-6zX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In yagom, Yagom.net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ER-Gb-X06">
+                                <rect key="frame" x="367.5" y="353" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qEu-k0-fpD">
+                                <rect key="frame" x="247" y="82" width="589" height="249"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Hello!
+
+I'm JunYoung.
+This is first works using XCODE.
+
+Thank you for waching this.
+If you want to contact me. 
+ E-mail  : gyeh159@naver.com Github : UCDAyoung </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Twc-5x-EvF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Twc-5x-EvF" firstAttribute="bottom" secondItem="4ER-Gb-X06" secondAttribute="bottom" constant="19" id="0TX-75-2GY"/>
+                            <constraint firstItem="HPy-K4-MSX" firstAttribute="leading" secondItem="Twc-5x-EvF" secondAttribute="leading" constant="16" id="702-EG-fU7"/>
+                            <constraint firstItem="qEu-k0-fpD" firstAttribute="leading" secondItem="FZ0-yJ-4rl" secondAttribute="trailing" constant="20" id="EDy-Ra-x2h"/>
+                            <constraint firstItem="4ER-Gb-X06" firstAttribute="top" secondItem="qEu-k0-fpD" secondAttribute="bottom" constant="22" id="HbP-zM-gjH"/>
+                            <constraint firstItem="4ER-Gb-X06" firstAttribute="centerX" secondItem="OP6-vV-Vrn" secondAttribute="centerX" id="NG0-PR-D0k"/>
+                            <constraint firstItem="HPy-K4-MSX" firstAttribute="top" secondItem="Twc-5x-EvF" secondAttribute="top" constant="20" id="SIJ-HV-tZH"/>
+                            <constraint firstItem="FZ0-yJ-4rl" firstAttribute="leading" secondItem="HPy-K4-MSX" secondAttribute="leading" id="Vh5-SA-7HQ"/>
+                            <constraint firstItem="FZ0-yJ-4rl" firstAttribute="top" secondItem="HPy-K4-MSX" secondAttribute="bottom" constant="50" id="Wqi-Ym-4iD"/>
+                            <constraint firstItem="qEu-k0-fpD" firstAttribute="top" secondItem="Twc-5x-EvF" secondAttribute="top" constant="82" id="ZSb-MC-e9z"/>
+                            <constraint firstItem="qEu-k0-fpD" firstAttribute="centerY" secondItem="FZ0-yJ-4rl" secondAttribute="centerY" id="iSP-Nw-hyQ"/>
+                            <constraint firstItem="Twc-5x-EvF" firstAttribute="trailing" secondItem="qEu-k0-fpD" secondAttribute="trailing" constant="16" id="ndz-Ge-goN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14h-gZ-xxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706.47321428571422" y="73.913043478260875"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="xmark.seal" catalog="system" width="128" height="128"/>
+        <image name="yagom_symbol" width="167" height="160.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
